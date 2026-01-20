@@ -143,11 +143,12 @@ function createCommodityChart(key, data) {
                 data: values,
                 borderColor: data.variacao >= 0 ? '#4caf70' : '#ff5252',
                 backgroundColor: data.variacao >= 0 ? 'rgba(76, 175, 112, 0.1)' : 'rgba(255, 82, 82, 0.1)',
-                borderWidth: 2,
+                borderWidth: 2.5,
                 fill: true,
                 tension: 0.4,
                 pointRadius: 0,
-                pointHoverRadius: 4
+                pointHoverRadius: 6,
+                pointHoverBorderWidth: 2
             }]
         },
         options: {
@@ -160,10 +161,19 @@ function createCommodityChart(key, data) {
                 tooltip: {
                     mode: 'index',
                     intersect: false,
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                    padding: 12,
-                    titleFont: { size: 14 },
-                    bodyFont: { size: 13 }
+                    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                    padding: 14,
+                    titleFont: { size: 14, weight: 'bold' },
+                    bodyFont: { size: 13 },
+                    borderColor: data.variacao >= 0 ? '#4caf70' : '#ff5252',
+                    borderWidth: 2,
+                    cornerRadius: 8,
+                    displayColors: false,
+                    callbacks: {
+                        label: function(context) {
+                            return formatCurrency(context.parsed.y);
+                        }
+                    }
                 }
             },
             scales: {
