@@ -1,0 +1,302 @@
+/* Estilos Premium para Simuladores - Prospere Agro Credit */
+
+/* Ícones de Linha Premium */
+.icon-line-premium {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Header do Simulador */
+.simulador-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.simulador-header .icon-line-premium {
+    width: 32px;
+    height: 32px;
+    stroke: var(--dourado);
+    flex-shrink: 0;
+}
+
+.simulador-header h3,
+.simulador-header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+/* Preview em Tempo Real */
+.drone-preview,
+.pecuaria-preview,
+.master-preview {
+    background: rgba(26, 95, 63, 0.05);
+    border-left: 3px solid var(--dourado);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.preview-value {
+    font-size: 0.95rem;
+    color: var(--cinza-escuro);
+}
+
+.preview-value strong {
+    color: var(--verde-escuro);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Formulários Premium */
+.simulador-form-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.form-group-premium label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group-premium input,
+.form-group-premium select {
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(26, 95, 63, 0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s;
+    color: var(--preto);
+}
+
+.form-group-premium input:focus,
+.form-group-premium select:focus {
+    outline: none;
+    border-color: var(--dourado);
+    background: var(--branco);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group-premium.focused label {
+    color: var(--dourado);
+}
+
+.form-group-premium input::placeholder {
+    color: var(--cinza-medio);
+    opacity: 0.7;
+}
+
+.form-group-premium select option {
+    background: var(--branco);
+    color: var(--preto);
+    padding: 0.5rem;
+}
+
+/* Botões Premium */
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-premium .icon-line-premium {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+/* Checkbox Premium */
+.checkbox-premium {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.checkbox-premium:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.checkbox-premium input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--dourado);
+}
+
+.checkbox-premium.checked {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--dourado);
+}
+
+/* Resultados Premium */
+.resultado-premium,
+.pecuaria-dashboard {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.resultado-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resultado-item-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.resultado-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.resultado-valor {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--dourado);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Timeline Premium */
+.timeline-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.timeline-item-premium {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--dourado);
+    border-radius: 8px;
+    color: var(--branco);
+    transition: all 0.3s;
+}
+
+.timeline-item-premium:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.timeline-item-premium strong {
+    color: var(--dourado);
+    font-weight: 700;
+}
+
+/* Notificação de Erro */
+.error-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #ff5252;
+    color: var(--branco);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(255, 82, 82, 0.4);
+    z-index: 10000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease-out;
+}
+
+.error-notification.show {
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-grid-premium {
+        grid-template-columns: 1fr;
+    }
+    
+    .resultado-grid-premium {
+        grid-template-columns: 1fr;
+    }
+    
+    .simulador-header .icon-line-premium {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .simulador-header h3 {
+        font-size: 1.2rem;
+    }
+}
