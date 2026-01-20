@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consórcio Agro Prospere | Crédito Inteligente para Máquinas, Drones e Pecuária</title>
+    <meta name="description" content="Planeje a compra de máquinas, drones e gado com estratégia financeira. Transforme parcelas em patrimônio rural.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚜 Prospere Agro</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#maquinas">Máquinas</a></li>
+                <li><a href="#drones">Drones</a></li>
+                <li><a href="#pecuaria">Pecuária</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#agrishow">Agrishow</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="agrishow-countdown">
+                    <div class="countdown-label">⏰ Próxima Agrishow em:</div>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label-small">Dias</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label-small">Horas</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label-small">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label-small">Seg</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="hero-title">Crédito inteligente para quem produz o Brasil.</h1>
+                <p class="hero-subtitle">Planeje a compra de máquinas, drones e gado com estratégia financeira, sem juros abusivos.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="openSimulador('master')">🚜 Simular consórcio agora</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('agrishow')">📅 Quero me preparar para a Agrishow</button>
+                </div>
+                <div class="hero-form">
+                    <h3>Comece agora: receba seu plano personalizado</h3>
+                    <form id="heroForm" class="quick-form">
+                        <input type="text" placeholder="Nome completo" required>
+                        <input type="tel" placeholder="WhatsApp" required>
+                        <select required>
+                            <option value="">Cultura/Atividade</option>
+                            <option value="soja">Soja</option>
+                            <option value="milho">Milho</option>
+                            <option value="cafe">Café</option>
+                            <option value="pecuaria">Pecuária</option>
+                            <option value="cana">Cana-de-açúcar</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                        <select required>
+                            <option value="">Interesse principal</option>
+                            <option value="maquinas">Máquinas</option>
+                            <option value="drones">Drones</option>
+                            <option value="gado">Gado</option>
+                            <option value="misto">Projeto misto</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Receber plano no WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilar 1: Máquinas Agrícolas -->
+    <section id="maquinas" class="pilar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🚜</span>
+                <h2>Máquinas e Implementos Agrícolas</h2>
+                <p>Transforme parcelas em frota própria. Saia do arrendamento para ter suas máquinas.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="machine-card" onclick="openMachineModal('trator')">
+                    <div class="card-icon">🚜</div>
+                    <h3>Tratores</h3>
+                    <p>Base de toda operação agrícola moderna</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+                <div class="machine-card" onclick="openMachineModal('colheitadeira')">
+                    <div class="card-icon">🌾</div>
+                    <h3>Colheitadeiras</h3>
+                    <p>Maximize sua colheita com tecnologia</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+                <div class="machine-card" onclick="openMachineModal('pulverizador')">
+                    <div class="card-icon">💨</div>
+                    <h3>Pulverizadores</h3>
+                    <p>Proteção eficiente da sua lavoura</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+                <div class="machine-card" onclick="openMachineModal('plantadeira')">
+                    <div class="card-icon">🌱</div>
+                    <h3>Plantadeiras</h3>
+                    <p>Precisão na semeadura</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+                <div class="machine-card" onclick="openMachineModal('implementos')">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Implementos</h3>
+                    <p>Complete sua operação agrícola</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+                <div class="machine-card" onclick="openMachineModal('caminhao')">
+                    <div class="card-icon">🚛</div>
+                    <h3>Caminhões Rurais</h3>
+                    <p>Logística eficiente do campo</p>
+                    <button class="btn-card">Planejar aquisição →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilar 2: Drones e Tecnologia -->
+    <section id="drones" class="pilar-section dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🚁</span>
+                <h2>Drones e Tecnologias para o Agro</h2>
+                <p>Agricultura de precisão que aumenta produtividade e reduz custos.</p>
+            </div>
+            <div class="drones-content">
+                <div class="drones-grid">
+                    <div class="drone-feature">
+                        <div class="feature-icon">🚁</div>
+                        <h3>Drones de Pulverização</h3>
+                        <p>Aplicação precisa de defensivos com economia de até 40%</p>
+                    </div>
+                    <div class="drone-feature">
+                        <div class="feature-icon">📸</div>
+                        <h3>Drones de Mapeamento</h3>
+                        <p>Análise completa da sua propriedade com imagens aéreas</p>
+                    </div>
+                    <div class="drone-feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Agricultura de Precisão</h3>
+                        <p>Decisões baseadas em dados reais</p>
+                    </div>
+                    <div class="drone-feature">
+                        <div class="feature-icon">🐄</div>
+                        <h3>Monitoramento de Rebanho</h3>
+                        <p>Controle total do seu gado via tecnologia</p>
+                    </div>
+                </div>
+                <div class="simulador-box">
+                    <h3>🎯 Monte seu projeto tecnológico rural</h3>
+                    <form id="droneSimulador" class="simulador-form">
+                        <select id="droneTipo" required>
+                            <option value="">Tipo de tecnologia</option>
+                            <option value="pulverizacao">Drone de Pulverização</option>
+                            <option value="mapeamento">Drone de Mapeamento</option>
+                            <option value="agricultura-precisao">Agricultura de Precisão</option>
+                            <option value="monitoramento">Monitoramento de Rebanho</option>
+                            <option value="sensoriamento">Sensoriamento e Automação</option>
+                        </select>
+                        <input type="number" id="droneValor" placeholder="Valor estimado (R$)" min="10000" required>
+                        <input type="number" id="dronePrazo" placeholder="Prazo (meses)" min="12" max="180" required>
+                        <select id="droneObjetivo" required>
+                            <option value="">Objetivo principal</option>
+                            <option value="produtividade">Aumentar Produtividade</option>
+                            <option value="economia">Reduzir Custos</option>
+                            <option value="escala">Aumentar Escala</option>
+                            <option value="qualidade">Melhorar Qualidade</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Calcular meu plano</button>
+                    </form>
+                    <div id="droneResultado" class="resultado-box" style="display: none;">
+                        <h4>📊 Seu plano de aquisição:</h4>
+                        <div class="resultado-item">
+                            <span>Valor do crédito:</span>
+                            <strong id="droneCredito">R$ 0,00</strong>
+                        </div>
+                        <div class="resultado-item">
+                            <span>Parcela estimada:</span>
+                            <strong id="droneParcela">R$ 0,00</strong>
+                        </div>
+                        <div class="resultado-item">
+                            <span>Economia estimada:</span>
+                            <strong id="droneEconomia">Até 40% em custos operacionais</strong>
+                        </div>
+                        <button class="btn btn-secondary" onclick="solicitarPlano('drone')">Quero um plano agro personalizado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilar 3: Pecuária -->
+    <section id="pecuaria" class="pilar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🐄</span>
+                <h2>Estratégias para Comprar Cabeça de Gado</h2>
+                <p class="section-tagline">Consórcio aplicado à pecuária: transformar crédito em rebanho.</p>
+            </div>
+            
+            <div class="pecuaria-types">
+                <div class="pecuaria-card">
+                    <span class="pecuaria-icon">🐂</span>
+                    <h3>Cria</h3>
+                    <p>Forme seu rebanho matriz</p>
+                </div>
+                <div class="pecuaria-card">
+                    <span class="pecuaria-icon">🐃</span>
+                    <h3>Recria</h3>
+                    <p>Desenvolva animais jovens</p>
+                </div>
+                <div class="pecuaria-card">
+                    <span class="pecuaria-icon">🐮</span>
+                    <h3>Engorda</h3>
+                    <p>Maximize o ganho de peso</p>
+                </div>
+                <div class="pecuaria-card">
+                    <span class="pecuaria-icon">🏭</span>
+                    <h3>Confinamento</h3>
+                    <p>Alta eficiência alimentar</p>
+                </div>
+                <div class="pecuaria-card">
+                    <span class="pecuaria-icon">🧬</span>
+                    <h3>Melhoramento Genético</h3>
+                    <p>Invista em genética superior</p>
+                </div>
+            </div>
+
+            <div class="pecuaria-simulador-container">
+                <div class="pecuaria-simulador">
+                    <h3>📊 Simulador Pecuário</h3>
+                    <p class="simulador-desc">Descubra quantas cabeças você pode adquirir e como planejar seu rebanho</p>
+                    <form id="pecuariaSimulador" class="simulador-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Valor disponível de crédito (R$)</label>
+                                <input type="number" id="pecuariaCredito" placeholder="Ex: 500000" min="10000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Preço médio da cabeça (R$)</label>
+                                <input type="number" id="pecuariaPreco" placeholder="Ex: 5000" min="1000" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Quantidade de animais desejada</label>
+                                <input type="number" id="pecuariaQuantidade" placeholder="Ex: 100" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Objetivo</label>
+                                <select id="pecuariaObjetivo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="engorda">Engorda</option>
+                                    <option value="cria">Cria</option>
+                                    <option value="giro">Giro</option>
+                                    <option value="patrimonio">Patrimônio</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calcular estratégia</button>
+                    </form>
+                    <div id="pecuariaResultado" class="resultado-box grande" style="display: none;">
+                        <h4>🐄 Sua estratégia pecuária:</h4>
+                        <div class="resultados-grid">
+                            <div class="resultado-card">
+                                <div class="resultado-label">Cabeças que pode comprar</div>
+                                <div class="resultado-valor" id="pecuariaCabecas">0</div>
+                                <div class="resultado-unidade">cabeças</div>
+                            </div>
+                            <div class="resultado-card">
+                                <div class="resultado-label">Valor do rebanho</div>
+                                <div class="resultado-valor" id="pecuariaRebanho">R$ 0,00</div>
+                            </div>
+                            <div class="resultado-card">
+                                <div class="resultado-label">Parcela estimada</div>
+                                <div class="resultado-valor" id="pecuariaParcela">R$ 0,00</div>
+                                <div class="resultado-unidade">/mês</div>
+                            </div>
+                            <div class="resultado-card">
+                                <div class="resultado-label">Projeção de crescimento</div>
+                                <div class="resultado-valor" id="pecuariaCrescimento">+0%</div>
+                                <div class="resultado-unidade">ao ano</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-large" onclick="solicitarPlano('pecuaria')">Receber plano pecuário completo no WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="pecuaria-educacao">
+                    <h3>🧠 Como usar consórcio na pecuária</h3>
+                    <div class="educacao-cards">
+                        <div class="educacao-card">
+                            <h4>📈 Formar Rebanho</h4>
+                            <p>Use o consórcio para adquirir animais matriz de forma planejada, transformando parcelas em patrimônio vivo.</p>
+                        </div>
+                        <div class="educacao-card">
+                            <h4>🔄 Estratégia de Giro</h4>
+                            <p>Planeje compras e vendas usando o crédito do consórcio para manter fluxo constante e crescimento.</p>
+                        </div>
+                        <div class="educacao-card">
+                            <h4>🏆 Patrimônio Rural</h4>
+                            <p>O rebanho é patrimônio. Use consórcio como ferramenta de acumulação e valorização de ativos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulador Master -->
+    <section id="simulador" class="pilar-section dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">📊</span>
+                <h2>Simulador Master Agro</h2>
+                <p>Planeje sua fazenda completa: máquinas, drones e gado em um único plano estratégico.</p>
+            </div>
+            <div class="master-simulador">
+                <div class="master-opcoes">
+                    <h3>Selecione seus objetivos:</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="optMaquinas" value="maquinas">
+                            <span>🚜 Máquinas</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="optDrones" value="drones">
+                            <span>🚁 Drones</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="optGado" value="gado">
+                            <span>🐄 Gado</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="optMisto" value="misto" checked>
+                            <span>🏡 Projeto Misto (Fazenda Completa)</span>
+                        </label>
+                    </div>
+                </div>
+                <form id="masterSimulador" class="simulador-form master-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Valor total do projeto (R$)</label>
+                            <input type="number" id="masterValor" placeholder="Ex: 1000000" min="50000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Prazo desejado (meses)</label>
+                            <input type="number" id="masterPrazo" placeholder="Ex: 120" min="24" max="180" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">📊 Calcular plano estratégico completo</button>
+                </form>
+                <div id="masterResultado" class="resultado-box grande master-resultado" style="display: none;">
+                    <h4>🎯 Seu plano agro completo:</h4>
+                    <div class="master-resumo">
+                        <div class="resumo-item">
+                            <span class="resumo-label">Valor total de crédito</span>
+                            <span class="resumo-valor" id="masterCredito">R$ 0,00</span>
+                        </div>
+                        <div class="resumo-item">
+                            <span class="resumo-label">Parcela mensal estimada</span>
+                            <span class="resumo-valor" id="masterParcela">R$ 0,00</span>
+                        </div>
+                        <div class="resumo-item">
+                            <span class="resumo-label">Estratégia de aquisição</span>
+                            <span class="resumo-valor" id="masterEstrategia">-</span>
+                        </div>
+                    </div>
+                    <div class="master-timeline">
+                        <h5>📅 Cronograma sugerido:</h5>
+                        <div id="masterTimeline" class="timeline"></div>
+                    </div>
+                    <button class="btn btn-secondary btn-large" onclick="solicitarPlano('master')">💬 Receber plano agro no WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Uso -->
+    <section id="casos" class="pilar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🌟</span>
+                <h2>Quem está transformando patrimônio rural</h2>
+                <p>Histórias reais de produtores que usaram estratégia financeira para crescer.</p>
+            </div>
+            <div class="casos-grid">
+                <div class="caso-card">
+                    <div class="caso-header">
+                        <div class="caso-avatar">🚜</div>
+                        <div>
+                            <h3>João da Silva</h3>
+                            <p class="caso-local">Campinas - SP</p>
+                        </div>
+                    </div>
+                    <p class="caso-desc">"Saí do arrendamento e hoje tenho frota própria. Com o consórcio planejado, comprei 3 tratores e uma colheitadeira em 4 anos."</p>
+                    <div class="caso-resultado">
+                        <span>📈 Resultado:</span>
+                        <strong>Frota própria com R$ 2,5M em máquinas</strong>
+                    </div>
+                </div>
+                <div class="caso-card">
+                    <div class="caso-header">
+                        <div class="caso-avatar">🐄</div>
+                        <div>
+                            <h3>Maria Santos</h3>
+                            <p class="caso-local">Ribeirão Preto - SP</p>
+                        </div>
+                    </div>
+                    <p class="caso-desc">"Comecei com 50 cabeças e hoje tenho 300. O consórcio me permitiu formar rebanho de forma estratégica, sem comprometer o fluxo."</p>
+                    <div class="caso-resultado">
+                        <span>📈 Resultado:</span>
+                        <strong>Rebanho 6x maior em 5 anos</strong>
+                    </div>
+                </div>
+                <div class="caso-card">
+                    <div class="caso-header">
+                        <div class="caso-avatar">🚁</div>
+                        <div>
+                            <h3>Carlos Oliveira</h3>
+                            <p class="caso-local">Sorocaba - SP</p>
+                        </div>
+                    </div>
+                    <p class="caso-desc">"Investi em drones e reduzi 35% no custo de defensivos. A tecnologia se pagou em 2 anos e hoje tenho operação mais eficiente."</p>
+                    <div class="caso-resultado">
+                        <span>📈 Resultado:</span>
+                        <strong>Economia de R$ 150k/ano em defensivos</strong>
+                    </div>
+                </div>
+                <div class="caso-card">
+                    <div class="caso-header">
+                        <div class="caso-avatar">🌱</div>
+                        <div>
+                            <h3>Ana Costa</h3>
+                            <p class="caso-local">Bauru - SP</p>
+                        </div>
+                    </div>
+                    <p class="caso-desc">"Aos 28 anos, estruturei meu patrimônio rural desde o início. Hoje tenho fazenda completa: máquinas, tecnologia e rebanho."</p>
+                    <div class="caso-resultado">
+                        <span>📈 Resultado:</span>
+                        <strong>Patrimônio rural estruturado desde jovem</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agrishow Experience -->
+    <section id="agrishow" class="pilar-section dark agrishow-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🗓️</span>
+                <h2>Agrishow Experience</h2>
+                <p class="section-tagline">Prepare seu crédito para comprar melhor na Agrishow.</p>
+            </div>
+            <div class="agrishow-content">
+                <div class="agrishow-beneficios">
+                    <h3>✨ Por que se preparar antes?</h3>
+                    <ul class="beneficios-list">
+                        <li>✅ Crédito pré-aprovado antes do evento</li>
+                        <li>✅ Negocie melhor preço com financiamento pronto</li>
+                        <li>✅ Atendimento prioritário no estande</li>
+                        <li>✅ Planeje compras estratégicas com antecedência</li>
+                        <li>✅ Aproveite ofertas exclusivas para clientes preparados</li>
+                    </ul>
+                </div>
+                <div class="agrishow-form-box">
+                    <h3>📅 Pré-cadastro Agrishow</h3>
+                    <form id="agrishowForm" class="simulador-form">
+                        <input type="text" placeholder="Nome completo" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="tel" placeholder="WhatsApp" required>
+                        <select required>
+                            <option value="">Interesse na Agrishow</option>
+                            <option value="maquinas">Máquinas e Implementos</option>
+                            <option value="drones">Drones e Tecnologia</option>
+                            <option value="insumos">Insumos Agrícolas</option>
+                            <option value="pecuaria">Pecuária</option>
+                            <option value="geral">Visita Geral</option>
+                        </select>
+                        <input type="text" placeholder="Empresa/Propriedade" required>
+                        <select required>
+                            <option value="">Área cultivada / Rebanho</option>
+                            <option value="pequeno">Até 100 ha / Até 100 cabeças</option>
+                            <option value="medio">100-500 ha / 100-500 cabeças</option>
+                            <option value="grande">500-2000 ha / 500-2000 cabeças</option>
+                            <option value="muito-grande">Acima de 2000 ha / Acima de 2000 cabeças</option>
+                        </select>
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>Desejo agendar atendimento no evento</span>
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-large">✅ Garantir meu atendimento</button>
+                    </form>
+                </div>
+            </div>
+            <div class="agrishow-ofertas">
+                <h3>🎁 Ofertas e Oportunidades</h3>
+                <p>Clientes pré-cadastrados têm acesso a condições especiais e prioridade no atendimento durante a Agrishow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Conversão -->
+    <section id="contato" class="pilar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">💬</span>
+                <h2>Fale com nossos especialistas</h2>
+                <p>Receba um plano personalizado para seu projeto agro.</p>
+            </div>
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <div class="contato-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e direto</p>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary">Abrir WhatsApp</a>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">📅</div>
+                    <h3>Agendar Consulta</h3>
+                    <p>Marque um horário com especialista</p>
+                    <button class="btn btn-secondary" onclick="abrirAgendamento()">Agendar agora</button>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">📥</div>
+                    <h3>Download Gratuito</h3>
+                    <p>Guia do Consórcio Inteligente no Agro</p>
+                    <button class="btn btn-secondary" onclick="downloadGuia()">Baixar guia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🚜 Prospere Agro</h3>
+                    <p>Prospere Agro não vende consórcio.<br>Ela estrutura patrimônio rural.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#maquinas">Máquinas</a></li>
+                        <li><a href="#drones">Drones</a></li>
+                        <li><a href="#pecuaria">Pecuária</a></li>
+                        <li><a href="#simulador">Simulador</a></li>
+                        <li><a href="#agrishow">Agrishow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>📱 WhatsApp: (11) 99999-9999</p>
+                    <p>📧 contato@prospereagro.com.br</p>
+                    <p>📍 São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prospere Agro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+        💬 WhatsApp
+    </a>
+
+    <!-- Modals -->
+    <div id="machineModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMachineModal()">&times;</span>
+            <div id="machineModalContent"></div>
+        </div>
+    </div>
+
+    <div id="agendamentoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAgendamentoModal()">&times;</span>
+            <h2>📅 Agendar Consulta</h2>
+            <form id="agendamentoForm" class="simulador-form">
+                <input type="text" placeholder="Nome completo" required>
+                <input type="tel" placeholder="WhatsApp" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="date" required>
+                <input type="time" required>
+                <select required>
+                    <option value="">Tipo de consulta</option>
+                    <option value="maquinas">Máquinas</option>
+                    <option value="drones">Drones</option>
+                    <option value="pecuaria">Pecuária</option>
+                    <option value="completo">Plano Completo</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Confirmar agendamento</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
