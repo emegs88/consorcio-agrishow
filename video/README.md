@@ -4,11 +4,11 @@ Esta pasta contém os arquivos de vídeo utilizados no site **Prospere Agro Cred
 
 ## 🎬 Vídeo Principal
 
-**Nome do arquivo:** `video.mp4`
+**Nome do arquivo:** `video.mov` (também aceita `.mp4` como fallback)
 
 ### 📋 Especificações Recomendadas
 
-- **Formato:** MP4 (H.264 codec)
+- **Formato:** MOV (QuickTime) ou MP4 (H.264 codec)
 - **Resolução:** 1920x1080 (Full HD) ou superior
 - **Duração:** 30-60 segundos (para loop suave)
 - **Tamanho:** Recomendado máximo de 10-15 MB (para web)

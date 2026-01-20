@@ -17,3 +17,8 @@ npm-debug.log*
 # Temporary files
 *.tmp
 *.temp
+
+# Vídeos grandes (opcional - descomente se não quiser versionar vídeos)
+# video/*.mp4
+# video/*.mov
+# video/*.avi
