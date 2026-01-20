@@ -495,12 +495,85 @@ function formatCurrency(value) {
     }).format(value);
 }
 
+// Animar números contadores
+function animateNumbers() {
+    const numberElements = document.querySelectorAll('.number-value[data-target]');
+    
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+                const target = parseFloat(entry.target.getAttribute('data-target'));
+                const isBillion = target < 100; // Se for menor que 100, é bilhão
+                const duration = 2000; // 2 segundos
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    if (isBillion) {
+                        entry.target.textContent = current.toFixed(1);
+                    } else {
+                        entry.target.textContent = Math.floor(current).toLocaleString('pt-BR');
+                    }
+                }, 16);
+            }
+        });
+    }, observerOptions);
+    
+    numberElements.forEach(el => observer.observe(el));
+}
+
+// Forçar reload sem cache
+function forceReload() {
+    if ('caches' in window) {
+        caches.keys().then(function(names) {
+            for (let name of names) {
+                caches.delete(name);
+            }
+        });
+    }
+    window.location.reload(true);
+}
+
 // Inicializar tudo quando DOM carregar
 document.addEventListener('DOMContentLoaded', function() {
     initCountdown();
-    initDroneSimulator();
-    initPecuariaSimulator();
-    initMasterSimulator();
+    animateNumbers();
+    
+    // Aguardar mercado.js carregar
+    if (typeof window.mercadoAPI !== 'undefined') {
+        window.mercadoAPI.initCommodities();
+        window.mercadoAPI.loadAgroNews();
+        window.mercadoAPI.updateAlertas();
+    }
+    
+    // Aguardar Chart.js carregar antes de inicializar simuladores
+    if (typeof Chart !== 'undefined') {
+        initDroneSimulator();
+        initPecuariaSimulator();
+        initMasterSimulator();
+    } else {
+        // Aguardar Chart.js carregar
+        const checkChart = setInterval(() => {
+            if (typeof Chart !== 'undefined') {
+                clearInterval(checkChart);
+                initDroneSimulator();
+                initPecuariaSimulator();
+                initMasterSimulator();
+            }
+        }, 100);
+    }
     
     // Formulários
     handleFormSubmit('heroForm');
