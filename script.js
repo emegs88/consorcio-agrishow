@@ -558,22 +558,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.mercadoAPI.updateAlertas();
     }
     
-    // Aguardar Chart.js carregar antes de inicializar simuladores
-    if (typeof Chart !== 'undefined') {
-        initDroneSimulator();
-        initPecuariaSimulator();
-        initMasterSimulator();
-    } else {
-        // Aguardar Chart.js carregar
-        const checkChart = setInterval(() => {
-            if (typeof Chart !== 'undefined') {
-                clearInterval(checkChart);
-                initDroneSimulator();
-                initPecuariaSimulator();
-                initMasterSimulator();
-            }
-        }, 100);
-    }
+    // Simuladores agora são inicializados por simuladores-premium.js
     
     // Formulários
     handleFormSubmit('heroForm');
