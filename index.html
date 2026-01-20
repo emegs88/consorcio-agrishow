@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consórcio Agro Prospere | Crédito Inteligente para Máquinas, Drones e Pecuária</title>
-    <meta name="description" content="Planeje a compra de máquinas, drones e gado com estratégia financeira. Transforme parcelas em patrimônio rural.">
+    <title>Prospere Agro Credit | Plataforma de Crédito Inteligente do Agronegócio</title>
+    <meta name="description" content="Crédito estruturado para quem move o agronegócio. Plataforma inteligente de consórcios aplicada a máquinas, tecnologia e pecuária.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation Premium -->
+    <nav class="navbar-premium">
         <div class="container">
-            <div class="nav-brand">
-                <h1>🚜 Prospere Agro</h1>
+            <div class="nav-brand-premium">
+                <div class="logo-premium">
+                    <span class="logo-icon">🌾</span>
+                    <div class="logo-text">
+                        <h1>Prospere Agro Credit</h1>
+                        <span class="logo-tagline">Crédito Estruturado do Agro</span>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu-premium">
                 <li><a href="#hero">Início</a></li>
-                <li><a href="#maquinas">Máquinas</a></li>
-                <li><a href="#drones">Drones</a></li>
-                <li><a href="#pecuaria">Pecuária</a></li>
-                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#inteligencia">Inteligência</a></li>
+                <li><a href="#mercado">Mercado</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#institucional">Institucional</a></li>
                 <li><a href="#agrishow">Agrishow</a></li>
-                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+                <li><a href="#contato" class="btn-nav-premium">Falar com Especialista</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -34,459 +41,758 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
+    <!-- Hero Section com Vídeo Background -->
+    <section id="hero" class="hero-premium">
+        <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+            <source src="video.mp4" type="video/mp4">
+            <!-- Fallback caso o vídeo não carregue -->
+        </video>
+        <div class="hero-overlay-premium"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="agrishow-countdown">
-                    <div class="countdown-label">⏰ Próxima Agrishow em:</div>
-                    <div class="countdown-timer" id="countdown">
-                        <div class="countdown-item">
+            <div class="hero-content-premium">
+                <div class="agrishow-countdown-premium">
+                    <span class="countdown-badge">⏰ Agrishow 2024</span>
+                    <div class="countdown-timer-premium" id="countdown">
+                        <div class="countdown-item-premium">
                             <span class="countdown-value" id="days">00</span>
-                            <span class="countdown-label-small">Dias</span>
+                            <span class="countdown-label">Dias</span>
                         </div>
-                        <div class="countdown-item">
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-item-premium">
                             <span class="countdown-value" id="hours">00</span>
-                            <span class="countdown-label-small">Horas</span>
+                            <span class="countdown-label">Horas</span>
                         </div>
-                        <div class="countdown-item">
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-item-premium">
                             <span class="countdown-value" id="minutes">00</span>
-                            <span class="countdown-label-small">Min</span>
+                            <span class="countdown-label">Min</span>
                         </div>
-                        <div class="countdown-item">
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-item-premium">
                             <span class="countdown-value" id="seconds">00</span>
-                            <span class="countdown-label-small">Seg</span>
+                            <span class="countdown-label">Seg</span>
                         </div>
                     </div>
                 </div>
-                <h1 class="hero-title">Crédito inteligente para quem produz o Brasil.</h1>
-                <p class="hero-subtitle">Planeje a compra de máquinas, drones e gado com estratégia financeira, sem juros abusivos.</p>
-                <div class="hero-cta">
-                    <button class="btn btn-primary" onclick="openSimulador('master')">🚜 Simular consórcio agora</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('agrishow')">📅 Quero me preparar para a Agrishow</button>
+                
+                <h1 class="hero-title-premium">
+                    Crédito estruturado para quem move o agronegócio.
+                </h1>
+                <p class="hero-subtitle-premium">
+                    Plataforma inteligente de consórcios aplicada a máquinas, tecnologia e pecuária.
+                </p>
+                
+                <div class="hero-cta-premium">
+                    <button class="btn-premium btn-primary-premium" onclick="openSimulador('master')">
+                        <span>📊</span> Criar Projeto Agro
+                    </button>
+                    <button class="btn-premium btn-secondary-premium" onclick="scrollToSection('inteligencia')">
+                        <span>🔍</span> Explorar Plataforma
+                    </button>
+                    <button class="btn-premium btn-outline-premium" onclick="scrollToSection('agrishow')">
+                        <span>🎯</span> Agrishow Experience
+                    </button>
                 </div>
-                <div class="hero-form">
-                    <h3>Comece agora: receba seu plano personalizado</h3>
-                    <form id="heroForm" class="quick-form">
-                        <input type="text" placeholder="Nome completo" required>
-                        <input type="tel" placeholder="WhatsApp" required>
-                        <select required>
-                            <option value="">Cultura/Atividade</option>
-                            <option value="soja">Soja</option>
-                            <option value="milho">Milho</option>
-                            <option value="cafe">Café</option>
-                            <option value="pecuaria">Pecuária</option>
-                            <option value="cana">Cana-de-açúcar</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                        <select required>
-                            <option value="">Interesse principal</option>
-                            <option value="maquinas">Máquinas</option>
-                            <option value="drones">Drones</option>
-                            <option value="gado">Gado</option>
-                            <option value="misto">Projeto misto</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary">Receber plano no WhatsApp</button>
-                    </form>
+
+                <!-- Painel de Números Animados -->
+                <div class="hero-numbers-premium">
+                    <div class="number-card-premium">
+                        <div class="number-value" data-target="2.5">0</div>
+                        <div class="number-label">Bilhões estruturados</div>
+                        <div class="number-unit">R$</div>
+                    </div>
+                    <div class="number-card-premium">
+                        <div class="number-value" data-target="12500">0</div>
+                        <div class="number-label">Produtores atendidos</div>
+                        <div class="number-unit">+</div>
+                    </div>
+                    <div class="number-card-premium">
+                        <div class="number-value" data-target="18420">0</div>
+                        <div class="number-label">Projetos agro</div>
+                        <div class="number-unit">+</div>
+                    </div>
+                    <div class="number-card-premium">
+                        <div class="number-value" data-target="24">0</div>
+                        <div class="number-label">Estados atendidos</div>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span>Role para explorar</span>
+                    <div class="scroll-arrow"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilar 1: Máquinas Agrícolas -->
-    <section id="maquinas" class="pilar-section">
+    <!-- Painel de Inteligência Agro -->
+    <section id="inteligencia" class="inteligencia-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">🚜</span>
-                <h2>Máquinas e Implementos Agrícolas</h2>
-                <p>Transforme parcelas em frota própria. Saia do arrendamento para ter suas máquinas.</p>
+            <div class="section-header-premium">
+                <span class="section-badge">📊 INTELIGÊNCIA AGRO</span>
+                <h2>Central Financeira do Agronegócio</h2>
+                <p>Painéis em tempo real, gráficos interativos e métricas que demonstram o impacto do crédito estruturado no campo.</p>
             </div>
-            <div class="cards-grid">
-                <div class="machine-card" onclick="openMachineModal('trator')">
-                    <div class="card-icon">🚜</div>
-                    <h3>Tratores</h3>
-                    <p>Base de toda operação agrícola moderna</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+
+            <div class="dashboard-grid">
+                <!-- KPI Cards -->
+                <div class="kpi-card glass-card">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-content">
+                        <div class="kpi-label">Crédito Ativo</div>
+                        <div class="kpi-value">R$ 2,5 Bi</div>
+                        <div class="kpi-change positive">+18.5% vs ano anterior</div>
+                    </div>
                 </div>
-                <div class="machine-card" onclick="openMachineModal('colheitadeira')">
-                    <div class="card-icon">🌾</div>
-                    <h3>Colheitadeiras</h3>
-                    <p>Maximize sua colheita com tecnologia</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+                <div class="kpi-card glass-card">
+                    <div class="kpi-icon">🏆</div>
+                    <div class="kpi-content">
+                        <div class="kpi-label">Patrimônio Estruturado</div>
+                        <div class="kpi-value">R$ 8,2 Bi</div>
+                        <div class="kpi-change positive">+24.3% vs ano anterior</div>
+                    </div>
                 </div>
-                <div class="machine-card" onclick="openMachineModal('pulverizador')">
-                    <div class="card-icon">💨</div>
-                    <h3>Pulverizadores</h3>
-                    <p>Proteção eficiente da sua lavoura</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+                <div class="kpi-card glass-card">
+                    <div class="kpi-icon">🚜</div>
+                    <div class="kpi-content">
+                        <div class="kpi-label">Frota Agrícola</div>
+                        <div class="kpi-value">42.500</div>
+                        <div class="kpi-change positive">+12.8% vs ano anterior</div>
+                    </div>
                 </div>
-                <div class="machine-card" onclick="openMachineModal('plantadeira')">
-                    <div class="card-icon">🌱</div>
-                    <h3>Plantadeiras</h3>
-                    <p>Precisão na semeadura</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+                <div class="kpi-card glass-card">
+                    <div class="kpi-icon">🐄</div>
+                    <div class="kpi-content">
+                        <div class="kpi-label">Cabeças de Gado</div>
+                        <div class="kpi-value">850.000</div>
+                        <div class="kpi-change positive">+15.2% vs ano anterior</div>
+                    </div>
                 </div>
-                <div class="machine-card" onclick="openMachineModal('implementos')">
-                    <div class="card-icon">⚙️</div>
-                    <h3>Implementos</h3>
-                    <p>Complete sua operação agrícola</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+            </div>
+
+            <!-- Gráficos Dashboard -->
+            <div class="charts-grid">
+                <div class="chart-card glass-card">
+                    <h3>📈 Evolução Patrimonial Rural</h3>
+                    <canvas id="patrimonioChart"></canvas>
                 </div>
-                <div class="machine-card" onclick="openMachineModal('caminhao')">
-                    <div class="card-icon">🚛</div>
-                    <h3>Caminhões Rurais</h3>
-                    <p>Logística eficiente do campo</p>
-                    <button class="btn-card">Planejar aquisição →</button>
+                <div class="chart-card glass-card">
+                    <h3>🚜 Frota Agrícola Estruturada</h3>
+                    <canvas id="frotaChart"></canvas>
+                </div>
+                <div class="chart-card glass-card">
+                    <h3>🐄 Crescimento de Rebanho</h3>
+                    <canvas id="rebanhoChart"></canvas>
+                </div>
+                <div class="chart-card glass-card">
+                    <h3>🚁 Ganho de Produtividade Tecnológica</h3>
+                    <canvas id="produtividadeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Mapa de Operações -->
+            <div class="mapa-card glass-card">
+                <h3>🌍 Presença Nacional</h3>
+                <div class="mapa-container">
+                    <div class="estados-grid">
+                        <div class="estado-item">SP <span>3.240 projetos</span></div>
+                        <div class="estado-item">MG <span>2.850 projetos</span></div>
+                        <div class="estado-item">PR <span>2.180 projetos</span></div>
+                        <div class="estado-item">RS <span>1.920 projetos</span></div>
+                        <div class="estado-item">MT <span>1.750 projetos</span></div>
+                        <div class="estado-item">GO <span>1.680 projetos</span></div>
+                        <div class="estado-item">MS <span>1.520 projetos</span></div>
+                        <div class="estado-item">SC <span>1.240 projetos</span></div>
+                        <div class="estado-item">BA <span>1.150 projetos</span></div>
+                        <div class="estado-item">+15 estados</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilar 2: Drones e Tecnologia -->
-    <section id="drones" class="pilar-section dark">
+    <!-- Análise de Mercado e Commodities -->
+    <section id="mercado" class="mercado-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">🚁</span>
-                <h2>Drones e Tecnologias para o Agro</h2>
-                <p>Agricultura de precisão que aumenta produtividade e reduz custos.</p>
+            <div class="section-header-premium">
+                <span class="section-badge">📈 ANÁLISE DE MERCADO</span>
+                <h2>Central de Commodities e Notícias do Agro</h2>
+                <p>Cotações em tempo real, análise de mercado e notícias que impactam o preço do campo.</p>
             </div>
-            <div class="drones-content">
-                <div class="drones-grid">
-                    <div class="drone-feature">
-                        <div class="feature-icon">🚁</div>
+
+            <!-- Cotações de Commodities -->
+            <div class="commodities-grid">
+                <div class="commodity-card glass-card" data-commodity="arroba-boi">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">🐄</div>
+                        <div class="commodity-info">
+                            <h3>Arroba do Boi (@)</h3>
+                            <span class="commodity-code">CEPEA/ESALQ</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceArrobaBoi">R$ 0,00</div>
+                        <div class="price-change positive" id="changeArrobaBoi">+0.00%</div>
+                    </div>
+                    <canvas id="chartArrobaBoi" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateArrobaBoi">--</span></span>
+                    </div>
+                </div>
+
+                <div class="commodity-card glass-card" data-commodity="cafe">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">☕</div>
+                        <div class="commodity-info">
+                            <h3>Café (sc/60kg)</h3>
+                            <span class="commodity-code">CEPEA</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceCafe">R$ 0,00</div>
+                        <div class="price-change positive" id="changeCafe">+0.00%</div>
+                    </div>
+                    <canvas id="chartCafe" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateCafe">--</span></span>
+                    </div>
+                </div>
+
+                <div class="commodity-card glass-card" data-commodity="soja">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">🌾</div>
+                        <div class="commodity-info">
+                            <h3>Soja (sc/60kg)</h3>
+                            <span class="commodity-code">CEPEA</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceSoja">R$ 0,00</div>
+                        <div class="price-change positive" id="changeSoja">+0.00%</div>
+                    </div>
+                    <canvas id="chartSoja" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateSoja">--</span></span>
+                    </div>
+                </div>
+
+                <div class="commodity-card glass-card" data-commodity="milho">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">🌽</div>
+                        <div class="commodity-info">
+                            <h3>Milho (sc/60kg)</h3>
+                            <span class="commodity-code">CEPEA</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceMilho">R$ 0,00</div>
+                        <div class="price-change positive" id="changeMilho">+0.00%</div>
+                    </div>
+                    <canvas id="chartMilho" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateMilho">--</span></span>
+                    </div>
+                </div>
+
+                <div class="commodity-card glass-card" data-commodity="algodao">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">🧵</div>
+                        <div class="commodity-info">
+                            <h3>Algodão (sc/60kg)</h3>
+                            <span class="commodity-code">CEPEA</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceAlgodao">R$ 0,00</div>
+                        <div class="price-change positive" id="changeAlgodao">+0.00%</div>
+                    </div>
+                    <canvas id="chartAlgodao" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateAlgodao">--</span></span>
+                    </div>
+                </div>
+
+                <div class="commodity-card glass-card" data-commodity="acucar">
+                    <div class="commodity-header">
+                        <div class="commodity-icon">🍬</div>
+                        <div class="commodity-info">
+                            <h3>Açúcar Cristal (sc/50kg)</h3>
+                            <span class="commodity-code">CEPEA</span>
+                        </div>
+                    </div>
+                    <div class="commodity-price">
+                        <div class="price-value" id="priceAcucar">R$ 0,00</div>
+                        <div class="price-change positive" id="changeAcucar">+0.00%</div>
+                    </div>
+                    <canvas id="chartAcucar" class="commodity-chart"></canvas>
+                    <div class="commodity-details">
+                        <span>Última atualização: <span id="updateAcucar">--</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Análise Comparativa -->
+            <div class="analise-comparativa glass-card">
+                <h3>📊 Análise Comparativa de Commodities</h3>
+                <canvas id="comparativoChart" style="max-height: 400px;"></canvas>
+            </div>
+
+            <!-- Notícias do Agro -->
+            <div class="noticias-section">
+                <div class="section-header-premium">
+                    <span class="section-badge">📰 NOTÍCIAS DO AGRO</span>
+                    <h2>Impacto no Mercado Rural</h2>
+                    <p>Notícias relevantes que influenciam preços e estratégias do agronegócio.</p>
+                </div>
+
+                <div class="noticias-grid" id="noticiasGrid">
+                    <!-- Notícias serão carregadas via API -->
+                    <div class="noticia-card glass-card loading">
+                        <div class="loading-skeleton"></div>
+                    </div>
+                    <div class="noticia-card glass-card loading">
+                        <div class="loading-skeleton"></div>
+                    </div>
+                    <div class="noticia-card glass-card loading">
+                        <div class="loading-skeleton"></div>
+                    </div>
+                </div>
+
+                <div class="noticias-filtro">
+                    <button class="filtro-btn active" data-filtro="todas">Todas</button>
+                    <button class="filtro-btn" data-filtro="pecuaria">Pecuária</button>
+                    <button class="filtro-btn" data-filtro="graos">Grãos</button>
+                    <button class="filtro-btn" data-filtro="cafe">Café</button>
+                    <button class="filtro-btn" data-filtro="mercado">Mercado</button>
+                    <button class="filtro-btn" data-filtro="tecnologia">Tecnologia</button>
+                </div>
+            </div>
+
+            <!-- Alertas e Insights -->
+            <div class="alertas-section">
+                <div class="alerta-card glass-card importante">
+                    <div class="alerta-icon">⚠️</div>
+                    <div class="alerta-content">
+                        <h3>Alerta de Mercado</h3>
+                        <p id="alertaTexto">Monitorando variações de preços em tempo real...</p>
+                        <span class="alerta-time" id="alertaTime">Atualizado agora</span>
+                    </div>
+                </div>
+                <div class="alerta-card glass-card insight">
+                    <div class="alerta-icon">💡</div>
+                    <div class="alerta-content">
+                        <h3>Insight de Mercado</h3>
+                        <p id="insightTexto">Análise técnica e fundamentalista para decisões estratégicas.</p>
+                        <span class="alerta-time" id="insightTime">Atualizado agora</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisões de Soluções -->
+    <section id="solucoes" class="solucoes-section">
+        <div class="container">
+            <div class="section-header-premium">
+                <span class="section-badge">🚀 SOLUÇÕES</span>
+                <h2>Três Divisões, Uma Visão: Transformar Crédito em Patrimônio</h2>
+            </div>
+
+            <!-- Prospere Agro Machines -->
+            <div class="divisao-premium" id="maquinas">
+                <div class="divisao-header">
+                    <div class="divisao-icon">🚜</div>
+                    <div class="divisao-content">
+                        <h2>Prospere Agro Machines</h2>
+                        <p>Transforme parcelas em frota própria. Estruturação de patrimônio através de máquinas e implementos agrícolas.</p>
+                    </div>
+                </div>
+                
+                <div class="machines-grid-premium">
+                    <div class="machine-card-premium" onclick="openMachineModal('trator')">
+                        <div class="machine-icon">🚜</div>
+                        <h3>Tratores</h3>
+                        <p>Base fundamental da operação agrícola</p>
+                        <div class="machine-stats">
+                            <span>+2.840 unidades</span>
+                            <span>R$ 420M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                    <div class="machine-card-premium" onclick="openMachineModal('colheitadeira')">
+                        <div class="machine-icon">🌾</div>
+                        <h3>Colheitadeiras</h3>
+                        <p>Máxima eficiência na colheita</p>
+                        <div class="machine-stats">
+                            <span>+1.520 unidades</span>
+                            <span>R$ 380M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                    <div class="machine-card-premium" onclick="openMachineModal('pulverizador')">
+                        <div class="machine-icon">💨</div>
+                        <h3>Pulverizadores</h3>
+                        <p>Aplicação precisa de defensivos</p>
+                        <div class="machine-stats">
+                            <span>+3.120 unidades</span>
+                            <span>R$ 285M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                    <div class="machine-card-premium" onclick="openMachineModal('plantadeira')">
+                        <div class="machine-icon">🌱</div>
+                        <h3>Plantadeiras</h3>
+                        <p>Precisão na semeadura</p>
+                        <div class="machine-stats">
+                            <span>+2.450 unidades</span>
+                            <span>R$ 195M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                    <div class="machine-card-premium" onclick="openMachineModal('implementos')">
+                        <div class="machine-icon">⚙️</div>
+                        <h3>Implementos</h3>
+                        <p>Complete sua operação</p>
+                        <div class="machine-stats">
+                            <span>+5.280 unidades</span>
+                            <span>R$ 320M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                    <div class="machine-card-premium" onclick="openMachineModal('caminhao')">
+                        <div class="machine-icon">🚛</div>
+                        <h3>Caminhões Rurais</h3>
+                        <p>Logística eficiente</p>
+                        <div class="machine-stats">
+                            <span>+1.850 unidades</span>
+                            <span>R$ 245M estruturados</span>
+                        </div>
+                        <button class="btn-machine">Planejar Aquisição →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prospere Agro Tech -->
+            <div class="divisao-premium dark-divisao" id="drones">
+                <div class="divisao-header">
+                    <div class="divisao-icon">🚁</div>
+                    <div class="divisao-content">
+                        <h2>Prospere Agro Tech</h2>
+                        <p>Agricultura de precisão que aumenta produtividade, reduz custos e transforma propriedades rurais.</p>
+                    </div>
+                </div>
+
+                <div class="tech-features">
+                    <div class="tech-feature-card glass-card">
+                        <div class="tech-icon">🚁</div>
                         <h3>Drones de Pulverização</h3>
-                        <p>Aplicação precisa de defensivos com economia de até 40%</p>
+                        <p>Economia de até 40% em defensivos</p>
+                        <div class="tech-metric">+35% eficiência</div>
                     </div>
-                    <div class="drone-feature">
-                        <div class="feature-icon">📸</div>
+                    <div class="tech-feature-card glass-card">
+                        <div class="tech-icon">📸</div>
                         <h3>Drones de Mapeamento</h3>
-                        <p>Análise completa da sua propriedade com imagens aéreas</p>
+                        <p>Análise completa via imagens aéreas</p>
+                        <div class="tech-metric">+28% precisão</div>
                     </div>
-                    <div class="drone-feature">
-                        <div class="feature-icon">🎯</div>
+                    <div class="tech-feature-card glass-card">
+                        <div class="tech-icon">🎯</div>
                         <h3>Agricultura de Precisão</h3>
                         <p>Decisões baseadas em dados reais</p>
+                        <div class="tech-metric">+22% produtividade</div>
                     </div>
-                    <div class="drone-feature">
-                        <div class="feature-icon">🐄</div>
+                    <div class="tech-feature-card glass-card">
+                        <div class="tech-icon">🐄</div>
                         <h3>Monitoramento de Rebanho</h3>
-                        <p>Controle total do seu gado via tecnologia</p>
+                        <p>Controle total via tecnologia</p>
+                        <div class="tech-metric">+18% eficiência</div>
                     </div>
                 </div>
-                <div class="simulador-box">
-                    <h3>🎯 Monte seu projeto tecnológico rural</h3>
-                    <form id="droneSimulador" class="simulador-form">
-                        <select id="droneTipo" required>
-                            <option value="">Tipo de tecnologia</option>
-                            <option value="pulverizacao">Drone de Pulverização</option>
-                            <option value="mapeamento">Drone de Mapeamento</option>
-                            <option value="agricultura-precisao">Agricultura de Precisão</option>
-                            <option value="monitoramento">Monitoramento de Rebanho</option>
-                            <option value="sensoriamento">Sensoriamento e Automação</option>
-                        </select>
-                        <input type="number" id="droneValor" placeholder="Valor estimado (R$)" min="10000" required>
-                        <input type="number" id="dronePrazo" placeholder="Prazo (meses)" min="12" max="180" required>
-                        <select id="droneObjetivo" required>
-                            <option value="">Objetivo principal</option>
-                            <option value="produtividade">Aumentar Produtividade</option>
-                            <option value="economia">Reduzir Custos</option>
-                            <option value="escala">Aumentar Escala</option>
-                            <option value="qualidade">Melhorar Qualidade</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary">Calcular meu plano</button>
+
+                <div class="simulador-tech glass-card">
+                    <h3>🎯 Monte seu Projeto Tecnológico Rural</h3>
+                    <form id="droneSimulador" class="simulador-form-premium">
+                        <div class="form-grid-premium">
+                            <select id="droneTipo" required>
+                                <option value="">Tipo de tecnologia</option>
+                                <option value="pulverizacao">Drone de Pulverização</option>
+                                <option value="mapeamento">Drone de Mapeamento</option>
+                                <option value="agricultura-precisao">Agricultura de Precisão</option>
+                                <option value="monitoramento">Monitoramento de Rebanho</option>
+                                <option value="sensoriamento">Sensoriamento e Automação</option>
+                            </select>
+                            <input type="number" id="droneValor" placeholder="Valor estimado (R$)" min="10000" required>
+                            <input type="number" id="dronePrazo" placeholder="Prazo (meses)" min="12" max="180" required>
+                            <select id="droneObjetivo" required>
+                                <option value="">Objetivo principal</option>
+                                <option value="produtividade">Aumentar Produtividade</option>
+                                <option value="economia">Reduzir Custos</option>
+                                <option value="escala">Aumentar Escala</option>
+                                <option value="qualidade">Melhorar Qualidade</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-premium btn-primary-premium">📊 Calcular meu plano</button>
                     </form>
-                    <div id="droneResultado" class="resultado-box" style="display: none;">
-                        <h4>📊 Seu plano de aquisição:</h4>
-                        <div class="resultado-item">
-                            <span>Valor do crédito:</span>
-                            <strong id="droneCredito">R$ 0,00</strong>
+                    <div id="droneResultado" class="resultado-premium" style="display: none;">
+                        <div class="resultado-grid-premium">
+                            <div class="resultado-item-premium">
+                                <span class="resultado-label">Valor do crédito</span>
+                                <strong class="resultado-valor" id="droneCredito">R$ 0,00</strong>
+                            </div>
+                            <div class="resultado-item-premium">
+                                <span class="resultado-label">Parcela estimada</span>
+                                <strong class="resultado-valor" id="droneParcela">R$ 0,00</strong>
+                            </div>
+                            <div class="resultado-item-premium">
+                                <span class="resultado-label">ROI estimado</span>
+                                <strong class="resultado-valor" id="droneROI">40% economia</strong>
+                            </div>
                         </div>
-                        <div class="resultado-item">
-                            <span>Parcela estimada:</span>
-                            <strong id="droneParcela">R$ 0,00</strong>
+                        <canvas id="droneChart" style="max-height: 300px; margin-top: 2rem;"></canvas>
+                        <button class="btn-premium btn-secondary-premium" onclick="solicitarPlano('drone')">Receber plano personalizado</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prospere Agro Pecuária -->
+            <div class="divisao-premium" id="pecuaria">
+                <div class="divisao-header">
+                    <div class="divisao-icon">🐄</div>
+                    <div class="divisao-content">
+                        <h2>Prospere Agro Pecuária</h2>
+                        <p>Consórcio aplicado à pecuária: transformar crédito em rebanho. Estruturação patrimonial através de gado.</p>
+                    </div>
+                </div>
+
+                <div class="pecuaria-types-premium">
+                    <div class="pecuaria-type-card glass-card">
+                        <span class="type-icon">🐂</span>
+                        <h3>Cria</h3>
+                        <p>Forme seu rebanho matriz</p>
+                    </div>
+                    <div class="pecuaria-type-card glass-card">
+                        <span class="type-icon">🐃</span>
+                        <h3>Recria</h3>
+                        <p>Desenvolva animais jovens</p>
+                    </div>
+                    <div class="pecuaria-type-card glass-card">
+                        <span class="type-icon">🐮</span>
+                        <h3>Engorda</h3>
+                        <p>Maximize o ganho de peso</p>
+                    </div>
+                    <div class="pecuaria-type-card glass-card">
+                        <span class="type-icon">🏭</span>
+                        <h3>Confinamento</h3>
+                        <p>Alta eficiência alimentar</p>
+                    </div>
+                    <div class="pecuaria-type-card glass-card">
+                        <span class="type-icon">🧬</span>
+                        <h3>Melhoramento Genético</h3>
+                        <p>Invista em genética superior</p>
+                    </div>
+                </div>
+
+                <div class="pecuaria-dashboard-container">
+                    <div class="pecuaria-simulador-premium glass-card">
+                        <h3>📊 Simulador Pecuário Premium</h3>
+                        <p class="simulador-desc">Descubra quantas cabeças você pode adquirir e projete o crescimento do seu rebanho</p>
+                        <form id="pecuariaSimulador" class="simulador-form-premium">
+                            <div class="form-grid-premium">
+                                <div class="form-group-premium">
+                                    <label>Valor disponível de crédito (R$)</label>
+                                    <input type="number" id="pecuariaCredito" placeholder="Ex: 500000" min="10000" required>
+                                </div>
+                                <div class="form-group-premium">
+                                    <label>Preço médio da cabeça (R$)</label>
+                                    <input type="number" id="pecuariaPreco" placeholder="Ex: 5000" min="1000" required>
+                                </div>
+                                <div class="form-group-premium">
+                                    <label>Quantidade de animais desejada</label>
+                                    <input type="number" id="pecuariaQuantidade" placeholder="Ex: 100" min="1" required>
+                                </div>
+                                <div class="form-group-premium">
+                                    <label>Objetivo</label>
+                                    <select id="pecuariaObjetivo" required>
+                                        <option value="">Selecione</option>
+                                        <option value="engorda">Engorda</option>
+                                        <option value="cria">Cria</option>
+                                        <option value="giro">Giro</option>
+                                        <option value="patrimonio">Patrimônio</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-premium btn-primary-premium">Calcular estratégia</button>
+                        </form>
+                    </div>
+
+                    <div id="pecuariaResultado" class="pecuaria-dashboard glass-card" style="display: none;">
+                        <h4>🐄 Dashboard Pecuário</h4>
+                        <div class="pecuaria-kpis">
+                            <div class="pecuaria-kpi">
+                                <div class="kpi-label">Cabeças</div>
+                                <div class="kpi-big-value" id="pecuariaCabecas">0</div>
+                                <div class="kpi-unit">cabeças</div>
+                            </div>
+                            <div class="pecuaria-kpi">
+                                <div class="kpi-label">Valor do Rebanho</div>
+                                <div class="kpi-big-value" id="pecuariaRebanho">R$ 0,00</div>
+                            </div>
+                            <div class="pecuaria-kpi">
+                                <div class="kpi-label">Parcela Mensal</div>
+                                <div class="kpi-big-value" id="pecuariaParcela">R$ 0,00</div>
+                            </div>
+                            <div class="pecuaria-kpi">
+                                <div class="kpi-label">Crescimento Anual</div>
+                                <div class="kpi-big-value" id="pecuariaCrescimento">+0%</div>
+                            </div>
                         </div>
-                        <div class="resultado-item">
-                            <span>Economia estimada:</span>
-                            <strong id="droneEconomia">Até 40% em custos operacionais</strong>
-                        </div>
-                        <button class="btn btn-secondary" onclick="solicitarPlano('drone')">Quero um plano agro personalizado</button>
+                        <canvas id="pecuariaChart" style="max-height: 300px; margin-top: 2rem;"></canvas>
+                        <button class="btn-premium btn-secondary-premium" onclick="solicitarPlano('pecuaria')">Receber plano pecuário completo</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilar 3: Pecuária -->
-    <section id="pecuaria" class="pilar-section">
+    <!-- Simulador Master Terminal -->
+    <section id="simulador" class="simulador-master-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">🐄</span>
-                <h2>Estratégias para Comprar Cabeça de Gado</h2>
-                <p class="section-tagline">Consórcio aplicado à pecuária: transformar crédito em rebanho.</p>
-            </div>
-            
-            <div class="pecuaria-types">
-                <div class="pecuaria-card">
-                    <span class="pecuaria-icon">🐂</span>
-                    <h3>Cria</h3>
-                    <p>Forme seu rebanho matriz</p>
-                </div>
-                <div class="pecuaria-card">
-                    <span class="pecuaria-icon">🐃</span>
-                    <h3>Recria</h3>
-                    <p>Desenvolva animais jovens</p>
-                </div>
-                <div class="pecuaria-card">
-                    <span class="pecuaria-icon">🐮</span>
-                    <h3>Engorda</h3>
-                    <p>Maximize o ganho de peso</p>
-                </div>
-                <div class="pecuaria-card">
-                    <span class="pecuaria-icon">🏭</span>
-                    <h3>Confinamento</h3>
-                    <p>Alta eficiência alimentar</p>
-                </div>
-                <div class="pecuaria-card">
-                    <span class="pecuaria-icon">🧬</span>
-                    <h3>Melhoramento Genético</h3>
-                    <p>Invista em genética superior</p>
-                </div>
-            </div>
-
-            <div class="pecuaria-simulador-container">
-                <div class="pecuaria-simulador">
-                    <h3>📊 Simulador Pecuário</h3>
-                    <p class="simulador-desc">Descubra quantas cabeças você pode adquirir e como planejar seu rebanho</p>
-                    <form id="pecuariaSimulador" class="simulador-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Valor disponível de crédito (R$)</label>
-                                <input type="number" id="pecuariaCredito" placeholder="Ex: 500000" min="10000" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Preço médio da cabeça (R$)</label>
-                                <input type="number" id="pecuariaPreco" placeholder="Ex: 5000" min="1000" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Quantidade de animais desejada</label>
-                                <input type="number" id="pecuariaQuantidade" placeholder="Ex: 100" min="1" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Objetivo</label>
-                                <select id="pecuariaObjetivo" required>
-                                    <option value="">Selecione</option>
-                                    <option value="engorda">Engorda</option>
-                                    <option value="cria">Cria</option>
-                                    <option value="giro">Giro</option>
-                                    <option value="patrimonio">Patrimônio</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Calcular estratégia</button>
-                    </form>
-                    <div id="pecuariaResultado" class="resultado-box grande" style="display: none;">
-                        <h4>🐄 Sua estratégia pecuária:</h4>
-                        <div class="resultados-grid">
-                            <div class="resultado-card">
-                                <div class="resultado-label">Cabeças que pode comprar</div>
-                                <div class="resultado-valor" id="pecuariaCabecas">0</div>
-                                <div class="resultado-unidade">cabeças</div>
-                            </div>
-                            <div class="resultado-card">
-                                <div class="resultado-label">Valor do rebanho</div>
-                                <div class="resultado-valor" id="pecuariaRebanho">R$ 0,00</div>
-                            </div>
-                            <div class="resultado-card">
-                                <div class="resultado-label">Parcela estimada</div>
-                                <div class="resultado-valor" id="pecuariaParcela">R$ 0,00</div>
-                                <div class="resultado-unidade">/mês</div>
-                            </div>
-                            <div class="resultado-card">
-                                <div class="resultado-label">Projeção de crescimento</div>
-                                <div class="resultado-valor" id="pecuariaCrescimento">+0%</div>
-                                <div class="resultado-unidade">ao ano</div>
-                            </div>
-                        </div>
-                        <button class="btn btn-secondary btn-large" onclick="solicitarPlano('pecuaria')">Receber plano pecuário completo no WhatsApp</button>
-                    </div>
-                </div>
-
-                <div class="pecuaria-educacao">
-                    <h3>🧠 Como usar consórcio na pecuária</h3>
-                    <div class="educacao-cards">
-                        <div class="educacao-card">
-                            <h4>📈 Formar Rebanho</h4>
-                            <p>Use o consórcio para adquirir animais matriz de forma planejada, transformando parcelas em patrimônio vivo.</p>
-                        </div>
-                        <div class="educacao-card">
-                            <h4>🔄 Estratégia de Giro</h4>
-                            <p>Planeje compras e vendas usando o crédito do consórcio para manter fluxo constante e crescimento.</p>
-                        </div>
-                        <div class="educacao-card">
-                            <h4>🏆 Patrimônio Rural</h4>
-                            <p>O rebanho é patrimônio. Use consórcio como ferramenta de acumulação e valorização de ativos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Simulador Master -->
-    <section id="simulador" class="pilar-section dark">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-icon">📊</span>
-                <h2>Simulador Master Agro</h2>
+            <div class="section-header-premium">
+                <span class="section-badge">📊 SIMULADOR MASTER</span>
+                <h2>Terminal Financeiro Agro</h2>
                 <p>Planeje sua fazenda completa: máquinas, drones e gado em um único plano estratégico.</p>
             </div>
-            <div class="master-simulador">
-                <div class="master-opcoes">
-                    <h3>Selecione seus objetivos:</h3>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
+
+            <div class="master-terminal glass-card">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <h3>Prospere Agro Credit Terminal</h3>
+                </div>
+                
+                <div class="master-opcoes-premium">
+                    <h4>Selecione seus objetivos:</h4>
+                    <div class="checkbox-group-premium">
+                        <label class="checkbox-premium">
                             <input type="checkbox" id="optMaquinas" value="maquinas">
                             <span>🚜 Máquinas</span>
                         </label>
-                        <label class="checkbox-label">
+                        <label class="checkbox-premium">
                             <input type="checkbox" id="optDrones" value="drones">
                             <span>🚁 Drones</span>
                         </label>
-                        <label class="checkbox-label">
+                        <label class="checkbox-premium">
                             <input type="checkbox" id="optGado" value="gado">
                             <span>🐄 Gado</span>
                         </label>
-                        <label class="checkbox-label">
+                        <label class="checkbox-premium">
                             <input type="checkbox" id="optMisto" value="misto" checked>
                             <span>🏡 Projeto Misto (Fazenda Completa)</span>
                         </label>
                     </div>
                 </div>
-                <form id="masterSimulador" class="simulador-form master-form">
-                    <div class="form-row">
-                        <div class="form-group">
+
+                <form id="masterSimulador" class="master-form-premium">
+                    <div class="form-grid-premium">
+                        <div class="form-group-premium">
                             <label>Valor total do projeto (R$)</label>
                             <input type="number" id="masterValor" placeholder="Ex: 1000000" min="50000" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group-premium">
                             <label>Prazo desejado (meses)</label>
                             <input type="number" id="masterPrazo" placeholder="Ex: 120" min="24" max="180" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large">📊 Calcular plano estratégico completo</button>
+                    <button type="submit" class="btn-premium btn-primary-premium btn-large">📊 Calcular plano estratégico completo</button>
                 </form>
-                <div id="masterResultado" class="resultado-box grande master-resultado" style="display: none;">
-                    <h4>🎯 Seu plano agro completo:</h4>
-                    <div class="master-resumo">
-                        <div class="resumo-item">
-                            <span class="resumo-label">Valor total de crédito</span>
-                            <span class="resumo-valor" id="masterCredito">R$ 0,00</span>
+
+                <div id="masterResultado" class="master-dashboard" style="display: none;">
+                    <h4>🎯 Dashboard do Seu Projeto Agro</h4>
+                    <div class="master-resumo-premium">
+                        <div class="master-kpi">
+                            <span class="kpi-label">Valor total de crédito</span>
+                            <span class="kpi-mega-value" id="masterCredito">R$ 0,00</span>
                         </div>
-                        <div class="resumo-item">
-                            <span class="resumo-label">Parcela mensal estimada</span>
-                            <span class="resumo-valor" id="masterParcela">R$ 0,00</span>
-                        </div>
-                        <div class="resumo-item">
-                            <span class="resumo-label">Estratégia de aquisição</span>
-                            <span class="resumo-valor" id="masterEstrategia">-</span>
+                        <div class="master-kpi">
+                            <span class="kpi-label">Parcela mensal estimada</span>
+                            <span class="kpi-mega-value" id="masterParcela">R$ 0,00</span>
                         </div>
                     </div>
-                    <div class="master-timeline">
-                        <h5>📅 Cronograma sugerido:</h5>
-                        <div id="masterTimeline" class="timeline"></div>
+                    <div class="master-charts-container">
+                        <div class="master-chart-box">
+                            <h5>Projeção Patrimonial</h5>
+                            <canvas id="masterPatrimonioChart"></canvas>
+                        </div>
+                        <div class="master-chart-box">
+                            <h5>Timeline de Aquisição</h5>
+                            <canvas id="masterTimelineChart"></canvas>
+                        </div>
                     </div>
-                    <button class="btn btn-secondary btn-large" onclick="solicitarPlano('master')">💬 Receber plano agro no WhatsApp</button>
+                    <div class="master-timeline-premium">
+                        <h5>📅 Cronograma Estratégico:</h5>
+                        <div id="masterTimeline" class="timeline-premium"></div>
+                    </div>
+                    <button class="btn-premium btn-secondary-premium btn-large" onclick="solicitarPlano('master')">💬 Receber plano completo no WhatsApp</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Casos de Uso -->
-    <section id="casos" class="pilar-section">
+    <!-- Institucional Premium -->
+    <section id="institucional" class="institucional-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">🌟</span>
-                <h2>Quem está transformando patrimônio rural</h2>
-                <p>Histórias reais de produtores que usaram estratégia financeira para crescer.</p>
+            <div class="section-header-premium">
+                <span class="section-badge">🏢 INSTITUCIONAL</span>
+                <h2>Estrutura, Governança e Segurança</h2>
+                <p>A Prospere Agro Credit é uma plataforma de crédito estruturado do agronegócio, com foco em transformar capital em patrimônio rural.</p>
             </div>
-            <div class="casos-grid">
-                <div class="caso-card">
-                    <div class="caso-header">
-                        <div class="caso-avatar">🚜</div>
-                        <div>
-                            <h3>João da Silva</h3>
-                            <p class="caso-local">Campinas - SP</p>
-                        </div>
-                    </div>
-                    <p class="caso-desc">"Saí do arrendamento e hoje tenho frota própria. Com o consórcio planejado, comprei 3 tratores e uma colheitadeira em 4 anos."</p>
-                    <div class="caso-resultado">
-                        <span>📈 Resultado:</span>
-                        <strong>Frota própria com R$ 2,5M em máquinas</strong>
-                    </div>
+
+            <div class="institucional-grid">
+                <div class="inst-card glass-card">
+                    <div class="inst-icon">🏢</div>
+                    <h3>Quem Somos</h3>
+                    <p>Plataforma de crédito estruturado especializada no agronegócio brasileiro, com mais de uma década de experiência em consórcios rurais.</p>
                 </div>
-                <div class="caso-card">
-                    <div class="caso-header">
-                        <div class="caso-avatar">🐄</div>
-                        <div>
-                            <h3>Maria Santos</h3>
-                            <p class="caso-local">Ribeirão Preto - SP</p>
-                        </div>
-                    </div>
-                    <p class="caso-desc">"Comecei com 50 cabeças e hoje tenho 300. O consórcio me permitiu formar rebanho de forma estratégica, sem comprometer o fluxo."</p>
-                    <div class="caso-resultado">
-                        <span>📈 Resultado:</span>
-                        <strong>Rebanho 6x maior em 5 anos</strong>
-                    </div>
+                <div class="inst-card glass-card">
+                    <div class="inst-icon">🔒</div>
+                    <h3>Segurança</h3>
+                    <p>Compliance total com regulamentações do Banco Central e CVM. Seus dados e operações protegidos pelos mais altos padrões de segurança.</p>
                 </div>
-                <div class="caso-card">
-                    <div class="caso-header">
-                        <div class="caso-avatar">🚁</div>
-                        <div>
-                            <h3>Carlos Oliveira</h3>
-                            <p class="caso-local">Sorocaba - SP</p>
-                        </div>
-                    </div>
-                    <p class="caso-desc">"Investi em drones e reduzi 35% no custo de defensivos. A tecnologia se pagou em 2 anos e hoje tenho operação mais eficiente."</p>
-                    <div class="caso-resultado">
-                        <span>📈 Resultado:</span>
-                        <strong>Economia de R$ 150k/ano em defensivos</strong>
-                    </div>
+                <div class="inst-card glass-card">
+                    <div class="inst-icon">⚖️</div>
+                    <h3>Governança</h3>
+                    <p>Conselho consultivo formado por especialistas do agro e finanças. Transparência e ética em todas as operações.</p>
                 </div>
-                <div class="caso-card">
-                    <div class="caso-header">
-                        <div class="caso-avatar">🌱</div>
-                        <div>
-                            <h3>Ana Costa</h3>
-                            <p class="caso-local">Bauru - SP</p>
-                        </div>
-                    </div>
-                    <p class="caso-desc">"Aos 28 anos, estruturei meu patrimônio rural desde o início. Hoje tenho fazenda completa: máquinas, tecnologia e rebanho."</p>
-                    <div class="caso-resultado">
-                        <span>📈 Resultado:</span>
-                        <strong>Patrimônio rural estruturado desde jovem</strong>
-                    </div>
+                <div class="inst-card glass-card">
+                    <div class="inst-icon">🤝</div>
+                    <h3>Parcerias</h3>
+                    <p>Rede de parceiros estratégicos: fabricantes de máquinas, empresas de tecnologia agro e cooperativas rurais.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Agrishow Experience -->
-    <section id="agrishow" class="pilar-section dark agrishow-section">
+    <section id="agrishow" class="agrishow-section-premium">
+        <div class="agrishow-background">
+            <video autoplay muted loop playsinline class="agrishow-video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <div class="agrishow-overlay"></div>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">🗓️</span>
+            <div class="section-header-premium">
+                <span class="section-badge">🗓️ AGRISHOW 2024</span>
                 <h2>Agrishow Experience</h2>
                 <p class="section-tagline">Prepare seu crédito para comprar melhor na Agrishow.</p>
             </div>
-            <div class="agrishow-content">
-                <div class="agrishow-beneficios">
+
+            <div class="agrishow-content-premium">
+                <div class="agrishow-beneficios-premium glass-card">
                     <h3>✨ Por que se preparar antes?</h3>
-                    <ul class="beneficios-list">
+                    <ul class="beneficios-list-premium">
                         <li>✅ Crédito pré-aprovado antes do evento</li>
                         <li>✅ Negocie melhor preço com financiamento pronto</li>
                         <li>✅ Atendimento prioritário no estande</li>
@@ -494,11 +800,11 @@
                         <li>✅ Aproveite ofertas exclusivas para clientes preparados</li>
                     </ul>
                 </div>
-                <div class="agrishow-form-box">
-                    <h3>📅 Pré-cadastro Agrishow</h3>
-                    <form id="agrishowForm" class="simulador-form">
+                <div class="agrishow-form-premium glass-card">
+                    <h3>📅 Pré-cadastro Agrishow 2024</h3>
+                    <form id="agrishowForm" class="simulador-form-premium">
                         <input type="text" placeholder="Nome completo" required>
-                        <input type="email" placeholder="E-mail" required>
+                        <input type="email" placeholder="E-mail corporativo" required>
                         <input type="tel" placeholder="WhatsApp" required>
                         <select required>
                             <option value="">Interesse na Agrishow</option>
@@ -516,101 +822,103 @@
                             <option value="grande">500-2000 ha / 500-2000 cabeças</option>
                             <option value="muito-grande">Acima de 2000 ha / Acima de 2000 cabeças</option>
                         </select>
-                        <label class="checkbox-label">
+                        <label class="checkbox-premium">
                             <input type="checkbox" required>
                             <span>Desejo agendar atendimento no evento</span>
                         </label>
-                        <button type="submit" class="btn btn-primary btn-large">✅ Garantir meu atendimento</button>
+                        <button type="submit" class="btn-premium btn-primary-premium btn-large">✅ Garantir meu atendimento</button>
                     </form>
                 </div>
             </div>
-            <div class="agrishow-ofertas">
-                <h3>🎁 Ofertas e Oportunidades</h3>
-                <p>Clientes pré-cadastrados têm acesso a condições especiais e prioridade no atendimento durante a Agrishow.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Contato e Conversão -->
-    <section id="contato" class="pilar-section">
+    <!-- Contato Premium -->
+    <section id="contato" class="contato-section-premium">
         <div class="container">
-            <div class="section-header">
-                <span class="section-icon">💬</span>
-                <h2>Fale com nossos especialistas</h2>
+            <div class="section-header-premium">
+                <span class="section-badge">💬 CONTATO</span>
+                <h2>Fale com Nossos Especialistas</h2>
                 <p>Receba um plano personalizado para seu projeto agro.</p>
             </div>
-            <div class="contato-grid">
-                <div class="contato-card">
+            <div class="contato-grid-premium">
+                <div class="contato-card-premium glass-card">
                     <div class="contato-icon">📱</div>
                     <h3>WhatsApp</h3>
-                    <p>Atendimento rápido e direto</p>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary">Abrir WhatsApp</a>
+                    <p>Atendimento rápido e direto com especialistas</p>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="btn-premium btn-primary-premium">Abrir WhatsApp</a>
                 </div>
-                <div class="contato-card">
+                <div class="contato-card-premium glass-card">
                     <div class="contato-icon">📅</div>
                     <h3>Agendar Consulta</h3>
-                    <p>Marque um horário com especialista</p>
-                    <button class="btn btn-secondary" onclick="abrirAgendamento()">Agendar agora</button>
+                    <p>Marque um horário com especialista em crédito agro</p>
+                    <button class="btn-premium btn-secondary-premium" onclick="abrirAgendamento()">Agendar agora</button>
                 </div>
-                <div class="contato-card">
+                <div class="contato-card-premium glass-card">
                     <div class="contato-icon">📥</div>
-                    <h3>Download Gratuito</h3>
-                    <p>Guia do Consórcio Inteligente no Agro</p>
-                    <button class="btn btn-secondary" onclick="downloadGuia()">Baixar guia</button>
+                    <h3>Material Gratuito</h3>
+                    <p>Guia do Crédito Estruturado no Agro</p>
+                    <button class="btn-premium btn-outline-premium" onclick="downloadGuia()">Baixar material</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer Premium -->
+    <footer class="footer-premium">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>🚜 Prospere Agro</h3>
-                    <p>Prospere Agro não vende consórcio.<br>Ela estrutura patrimônio rural.</p>
+            <div class="footer-content-premium">
+                <div class="footer-brand-premium">
+                    <div class="logo-premium">
+                        <span class="logo-icon">🌾</span>
+                        <div class="logo-text">
+                            <h3>Prospere Agro Credit</h3>
+                            <span class="logo-tagline">Crédito Estruturado do Agro</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Prospere Agro Credit estrutura patrimônio, não apenas consórcio.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Links Rápidos</h4>
+                <div class="footer-links-premium">
+                    <h4>Navegação</h4>
                     <ul>
-                        <li><a href="#maquinas">Máquinas</a></li>
-                        <li><a href="#drones">Drones</a></li>
-                        <li><a href="#pecuaria">Pecuária</a></li>
-                        <li><a href="#simulador">Simulador</a></li>
+                        <li><a href="#inteligencia">Inteligência</a></li>
+                        <li><a href="#solucoes">Soluções</a></li>
+                        <li><a href="#institucional">Institucional</a></li>
                         <li><a href="#agrishow">Agrishow</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
+                <div class="footer-contact-premium">
                     <h4>Contato</h4>
                     <p>📱 WhatsApp: (11) 99999-9999</p>
                     <p>📧 contato@prospereagro.com.br</p>
                     <p>📍 São Paulo - SP</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Prospere Agro. Todos os direitos reservados.</p>
+            <div class="footer-bottom-premium">
+                <p>&copy; 2024 Prospere Agro Credit. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
-        💬 WhatsApp
+    <!-- WhatsApp Float Premium -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float-premium">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">WhatsApp</span>
     </a>
 
     <!-- Modals -->
-    <div id="machineModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeMachineModal()">&times;</span>
+    <div id="machineModal" class="modal-premium">
+        <div class="modal-content-premium glass-card">
+            <span class="close-premium" onclick="closeMachineModal()">&times;</span>
             <div id="machineModalContent"></div>
         </div>
     </div>
 
-    <div id="agendamentoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAgendamentoModal()">&times;</span>
+    <div id="agendamentoModal" class="modal-premium">
+        <div class="modal-content-premium glass-card">
+            <span class="close-premium" onclick="closeAgendamentoModal()">&times;</span>
             <h2>📅 Agendar Consulta</h2>
-            <form id="agendamentoForm" class="simulador-form">
+            <form id="agendamentoForm" class="simulador-form-premium">
                 <input type="text" placeholder="Nome completo" required>
                 <input type="tel" placeholder="WhatsApp" required>
                 <input type="email" placeholder="E-mail" required>
@@ -623,11 +931,13 @@
                     <option value="pecuaria">Pecuária</option>
                     <option value="completo">Plano Completo</option>
                 </select>
-                <button type="submit" class="btn btn-primary">Confirmar agendamento</button>
+                <button type="submit" class="btn-premium btn-primary-premium">Confirmar agendamento</button>
             </form>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="charts.js"></script>
+    <script src="mercado.js"></script>
 </body>
 </html>

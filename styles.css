@@ -1128,3 +1128,351 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* ============================================
+   SEÇÃO DE MERCADO E COMMODITIES
+   ============================================ */
+
+.mercado-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.commodities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.commodity-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.commodity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.commodity-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.commodity-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+    border-radius: 15px;
+}
+
+.commodity-info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--preto);
+    margin-bottom: 0.3rem;
+}
+
+.commodity-code {
+    font-size: 0.85rem;
+    color: var(--cinza-medio);
+    font-weight: 500;
+}
+
+.commodity-price {
+    margin-bottom: 1.5rem;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.price-change {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.price-change.positive {
+    background: rgba(76, 175, 112, 0.1);
+    color: var(--verde-escuro);
+}
+
+.price-change.negative {
+    background: rgba(255, 82, 82, 0.1);
+    color: #d32f2f;
+}
+
+.commodity-chart {
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.commodity-details {
+    font-size: 0.85rem;
+    color: var(--cinza-medio);
+    text-align: center;
+}
+
+.analise-comparativa {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.analise-comparativa h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+}
+
+/* Notícias do Agro */
+.noticias-section {
+    margin-top: 4rem;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.noticia-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.noticia-categoria {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(26, 95, 63, 0.1);
+    border-radius: 15px;
+}
+
+.noticia-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--preto);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.noticia-resumo {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.noticia-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.noticia-fonte {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+.noticia-data {
+    font-size: 0.85rem;
+    color: var(--cinza-medio);
+}
+
+.noticia-link {
+    color: var(--verde-escuro);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.noticia-link:hover {
+    color: var(--dourado);
+}
+
+.noticias-filtro {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.filtro-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--cinza-claro);
+    border-radius: 25px;
+    font-weight: 600;
+    color: var(--cinza-escuro);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filtro-btn:hover {
+    border-color: var(--verde-escuro);
+    color: var(--verde-escuro);
+}
+
+.filtro-btn.active {
+    background: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+/* Alertas e Insights */
+.alertas-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.alerta-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.alerta-card.importante {
+    border-left: 4px solid #ff9800;
+}
+
+.alerta-card.insight {
+    border-left: 4px solid var(--dourado);
+}
+
+.alerta-icon {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alerta-card.importante .alerta-icon {
+    background: rgba(255, 152, 0, 0.1);
+    border-radius: 15px;
+}
+
+.alerta-card.insight .alerta-icon {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 15px;
+}
+
+.alerta-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--preto);
+    margin-bottom: 0.5rem;
+}
+
+.alerta-content p {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.alerta-time {
+    font-size: 0.85rem;
+    color: var(--cinza-medio);
+}
+
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+    border-radius: 10px;
+    height: 200px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive para Mercado */
+@media (max-width: 768px) {
+    .commodities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .alertas-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-value {
+        font-size: 2rem;
+    }
+    
+    .noticias-filtro {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filtro-btn {
+        width: 100%;
+    }
+}
