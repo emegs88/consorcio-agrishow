@@ -435,8 +435,213 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Gráficos Premium */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.chart-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--dourado);
+}
+
+.chart-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.chart-card canvas {
+    flex: 1;
+    max-height: 250px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.commodity-chart {
+    width: 100% !important;
+    height: 150px !important;
+    max-height: 150px;
+    margin: 1rem 0;
+}
+
+.analise-comparativa {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.analise-comparativa h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.analise-comparativa canvas {
+    flex: 1;
+    max-height: 350px;
+    width: 100% !important;
+}
+
+/* Master Charts */
+.master-charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.master-chart-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.master-chart-box h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--branco);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.master-chart-box canvas {
+    flex: 1;
+    max-height: 220px;
+    width: 100% !important;
+}
+
+/* KPI Cards Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.kpi-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--dourado);
+}
+
+.kpi-icon {
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.kpi-content {
+    flex: 1;
+}
+
+.kpi-label {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    margin-bottom: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.kpi-change {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.kpi-change.positive {
+    color: var(--verde-escuro);
+}
+
+.kpi-change.negative {
+    color: #d32f2f;
+}
+
 /* Responsive Premium */
 @media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .master-charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-card {
+        height: 300px;
+    }
+    
+    .analise-comparativa {
+        height: 350px;
+    }
+    
+    .master-chart-box {
+        height: 250px;
+    }
     .hero-title-premium {
         font-size: 2.5rem;
     }
