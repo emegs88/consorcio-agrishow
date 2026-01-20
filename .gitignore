@@ -18,7 +18,9 @@ npm-debug.log*
 *.tmp
 *.temp
 
-# Vídeos grandes (opcional - descomente se não quiser versionar vídeos)
-# video/*.mp4
-# video/*.mov
-# video/*.avi
+# Vídeos grandes - não versionar por padrão (GitHub tem limite de 50MB)
+video/*.mp4
+video/*.mov
+video/*.avi
+*.mov
+*.mp4
